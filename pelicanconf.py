@@ -1,6 +1,7 @@
 AUTHOR = 'ulf.gj'
 SITENAME = 'The Choesels'
-SITEURL = ""
+# SITEURL = "https://choesels.github.io"
+SITEURL = ''
 
 PATH = "content"
 TIMEZONE = 'Europe/Brussels'

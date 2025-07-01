@@ -248,7 +248,8 @@ section.alternate.arrow-down {
 /* custom */
  #home.full-screen, #home.half-screen {
   /*background:#F0F0F0 url('../img/loading.gif') no-repeat center;*/
-  background:#F0F0F0 url('../img/choesels-banner-02.jpg') no-repeat center;
+  /*background:#F0F0F0 url('../img/choesels-banner-02.jpg') no-repeat center;*/
+  background:#000 url('../img/choesels-banner-02.jpg') no-repeat center;
 }
 /** 04. Content
  **************************************************************** **/
@@ -468,4 +469,8 @@ footer a.toTop {
 /*subtle top margin on an element if it's too close to another*/
 #subtle-top-margin {
     margin-top: 18px;
+}
+
+footer#scroll-to-top-no-bg {
+    background: transparent;
 }
