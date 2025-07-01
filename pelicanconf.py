@@ -23,7 +23,7 @@ STYLESHEET_URL = True
 
 # Blogroll
 LINKS = (
-    # ("Pelican", "https://getpelican.com/"),
+    ("Youtube", "https://www.youtube.com/@ChristopheDarc/"),
     # ("Python.org", "https://www.python.org/"),
     # ("Jinja2", "https://palletsprojects.com/p/jinja/"),
     # ("You can modify those links in your config file", "#"),
@@ -31,8 +31,8 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    # ("You can add links in your config file", "#"),
-    # ("Another social link", "#"),
+    ("You can add links in your config file", "#"),
+    ("Another social link", "#"),
 )
 
 DEFAULT_PAGINATION = False

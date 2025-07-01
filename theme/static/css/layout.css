@@ -247,7 +247,8 @@ section.alternate.arrow-down {
 }
 /* custom */
  #home.full-screen, #home.half-screen {
-  background:#F0F0F0 url('../img/loading.gif') no-repeat center;
+  /*background:#F0F0F0 url('../img/loading.gif') no-repeat center;*/
+  background:#F0F0F0 url('../img/choesels-banner-02.jpg') no-repeat center;
 }
 /** 04. Content
  **************************************************************** **/
@@ -458,3 +459,9 @@ footer a.toTop {
     margin-bottom:1px;
   }
 }
+
+
+/*-----------------------------------*/
+/* --- my custom styles - ulf.gj --- */
+/*-----------------------------------*/
+
