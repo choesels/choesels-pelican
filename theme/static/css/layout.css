@@ -465,3 +465,7 @@ footer a.toTop {
 /* --- my custom styles - ulf.gj --- */
 /*-----------------------------------*/
 
+/*subtle top margin on an element if it's too close to another*/
+#subtle-top-margin {
+    margin-top: 18px;
+}
