@@ -1,3 +1,8 @@
+from datetime import datetime, date
+import os
+import re
+
+
 AUTHOR = 'ulf.gj'
 SITENAME = 'The Choesels'
 # SITEURL = "https://choesels.github.io"
@@ -65,21 +70,13 @@ CONCERTS = [
     {"title": "Bar for Me", "date": "2029-01-01", "location": "Sablon, Bxl", "event_link": ""},
 ]
 
-from datetime import datetime, date
 
 def as_date(value):
     return datetime.strptime(value, "%Y-%m-%d").date()
 
-JINJA_FILTERS = {
-    'as_date': as_date,
-}
-
-import os
-import re
-
+""" Display latest poster in concert section """
 # poster image path
 folder = 'theme/static/img/posters'
-
 # Regex to extract date in format YYYY-MM-DD (e.g., 2028-01-01)
 date_pattern = re.compile(r'(\d{4}-\d{2}-\d{2})')
 latest_file = None
@@ -94,6 +91,11 @@ for filename in os.listdir(folder):
             latest_date = file_date
             latest_file = filename
 
+
+""" Misc variable exports for use in templates """
+JINJA_FILTERS = {
+    'as_date': as_date,
+}
 JINJA_GLOBALS = {
     'concerts': CONCERTS,
     'date': date,
