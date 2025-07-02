@@ -1,12 +1,5 @@
-{# If the user has opted into displaying thier articles as their homepage. #}
-{% if ARTICLES_HOME_PAGE %}
-    {% include "blog.html" %}
-{# Otherwise, use the template default #}
-{% else %}
-    {% include "about.html" %}
-    {% include "members.html" %}
-    {% include "concerts.html" %}
-    {% include "_includes/footer.html" %}
+{% include "about.html" %}
+{% include "members.html" %}
+{% include "concerts.html" %}
+{% include "_includes/footer.html" %}
 </body>
-
-{% endif %}

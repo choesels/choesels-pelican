@@ -324,10 +324,10 @@ footer a.social {
 }
 footer a.toTop {
   position:absolute;
-  left:50%;
+  left:75%;
   top:-23px;
-  margin-left:-20px;
-  background:rgba(0, 0, 0, 0.5);
+  /*background:rgba(0, 0, 0, 0.5);*/
+  background:rgba(80, 106, 172, 0.35);
   padding:10px 16px;
   bottom:0;
   font-size:23px;

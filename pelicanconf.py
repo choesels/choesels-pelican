@@ -44,6 +44,8 @@ DEFAULT_PAGINATION = False
 
 ####   my misc variables and logic   ####
 
+PAGE_PATHS = ['pages']
+
 CONCERTS = [
     {"title": "Summer Fest 1998", "date": "1998-06-20", "location": "Central Park, NYC, USA"},
     {"title": "Bar Mitzva for Ezekiel 1", "date": "2003-03-01", "location": "Sablon, Bxl"},
