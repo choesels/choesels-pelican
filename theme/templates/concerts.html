@@ -1,44 +1,63 @@
+{% set today = date.today() %}
+{% set last_year = today.year - 1 %}
 
-{% set last_year = (CURRENT_DATE.year - 1) %}
 
-    <!-- CONCERTS -->
-    <section id="concerts">
+<!-- CONCERTS -->
+<section id="concerts">
     <div class="container">
         <header class="text-center">
-        <h1>CONCERTS</h1>
+            <h1>LATEST CONCERTS</h1>
         </header>
-
         <div class="container">
+            <div class="row">
 
-        </div>
+            <!-- Upcoming concerts -->
+            <div class="col-md-4 text-right">
+                <h3 style="margin-bottom: 16px">Upcoming</h3>
+                {% for concert in concerts %}
+                    {% if concert.date|as_date >= today %}
+                        <!-- <p><strong>{{ concert.date }}</strong><br />{{ concert.title }}<br />{{ concert.location }}</p> -->
+                        {% if concert.date %}
+                        <strong>{{ concert.date }}</strong><br />
+                        {% endif %}
+                        {% if concert.title %} {{ concert.title }}<br /> {% endif %}
+                        {% if concert.location %} {{ concert.location }} {% endif %}
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </div>
 
-        <article>
-            <div class="row text-left">
-
-                <div class="col-md-4">
-                    <h3>Past &mdash; (199x-{{last_year}})</h3>
-                    <p></p>
-                    <p>read from yaml file here</p>
-                    <p>1998-01-01 - basement, bxl</p>
-                    <p>2004-02-12 - xmas party at mom's, liege</p>
-                    <p>2015-03-11 - party in my pants, maastricht</p>
-                </div>
-
+                <!-- Empty col in the middle -->
                 <div class="col-md-4"></div>
 
-                <div class="col-md-4 text-right">
-                    <h3>Upcoming {{ last_year+1 }}</h3>
-                    <p></p>
-                    <p>2025-01-01 - read from yaml file here</p>
-                    <p>2025-02-02 - trallalal</p>
+                <!-- Past concerts -->
+                <div class="col-md-4">
+                    <h3 style="margin-bottom: 16px">Past</h3>
+                    {% for concert in concerts[:5:-1] %}
+                        {% if concert.date|as_date < today %}
+                            <p>
+                                {% if concert.date %}
+                                <strong>{{ concert.date }}</strong><br />
+                                {% endif %}
+                                {% if concert.title %} {{ concert.title }}<br /> {% endif %}
+                                {% if concert.location %} {{ concert.location }} {% endif %}
+                            </p>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-
-            </div>
+            </div><!-- /row text-left -->
+        </div>
         </article>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center"><a href="{{SITEURL}}/all-concerts.html">See all concerts</a><p></p></div>
+            <div class="col-md-4"></div>
+        </div>
+
         <div class="divider"><!-- lines divider --></div>
+    </div><!-- / .container -->
+</section>
+<!-- /CONCERTS -->
 
-    </div>
-    </section>
-    <!-- /CONCERTS -->
-
-<!-- this is the last section on the hompage. no scroll to to here since it's in the real footer -->
+<!-- this is the last section on the hompage. no scroll to top here since it's in the real footer -->

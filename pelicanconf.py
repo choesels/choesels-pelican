@@ -42,7 +42,38 @@ DEFAULT_PAGINATION = False
 # RELATIVE_URLS = True
 
 
-####   my misc variables and logic   #######
+####   my misc variables and logic   ####
 
-from datetime import datetime
-CURRENT_DATE = datetime.now()
+CONCERTS = [
+    {"title": "Summer Fest 1998", "date": "1998-06-20", "location": "Central Park, NYC, USA"},
+    {"title": "Bar Mitzva for Ezekiel 1", "date": "2003-03-01", "location": "Sablon, Bxl"},
+    {"title": "Bar Mitzva for Ezekiel 2", "date": "2003-03-01", "location": "Sablon, Bxl"},
+    {"title": "Bar Mitzva for Ezekiel 3", "date": "2003-03-01", "location": "Sablon, Bxl"},
+    {"title": "Autumn Jam", "date": "2004-10-05", "location": "Downtown Hall, Uptown"},
+    {"title": "", "date": "2024-03-23", "location": "Cafe Terminus, Evere"},
+    {"title": "", "date": "2024-05-04", "location": "Le Fille de on Pere, Rebecq"},
+    {"title": "CANCELLED", "date": "2024-06-22", "location": "??"},
+    {"title": "", "date": "2024-07-27", "location": "l'Exelcior, Jette"},
+    {"title": "", "date": "2024-09-14", "location": "Madras Bar, Braine-l'Alleud"},
+    {"title": "", "date": "2024-09-28", "location": "Cafe Terminus, Evere"},
+    {"title": "", "date": "2024-12-21", "location": "Le Métropole, Braine-l'Alleud"},
+    {"title": "Bar Mitzva for Ezekiel 1", "date": "2028-02-01", "location": "Sablon, Bxl"},
+    {"title": "Bar with Beers for Ezekiel 2", "date": "2028-03-01", "location": "Sablon, Bxl"},
+    {"title": "Barbapapa for Kids", "date": "2028-04-01", "location": "Sablon, Bxl"},
+    {"title": "Bar for Me", "date": "2029-01-01", "location": "Sablon, Bxl"},
+]
+
+from datetime import datetime, date
+
+def as_date(value):
+    return datetime.strptime(value, "%Y-%m-%d").date()
+
+JINJA_FILTERS = {
+    'as_date': as_date,
+}
+
+JINJA_GLOBALS = {
+    'concerts': CONCERTS,
+    'date': date,
+}
+
