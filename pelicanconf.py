@@ -57,17 +57,17 @@ CONCERTS = [
     {"title": "Bar Mitzva for Ezekiel 2", "date": "2003-03-01", "location": "Sablon, Bxl", "event_link": ""},
     {"title": "Bar Mitzva for Ezekiel 3", "date": "2003-03-01", "location": "Sablon, Bxl", "event_link": ""},
     {"title": "Autumn Jam", "date": "2004-10-05", "location": "Downtown Hall, Uptown", "event_link": ""},
-    {"title": "", "date": "2024-03-23", "location": "Cafe Terminus, Evere", "event_link": "https://www.facebook.com/events/8-rue-%C3%A9glise-st-pierre-jette-belgique/the-choesels/457359800386869/"},
-    {"title": "", "date": "2024-05-04", "location": "Le Fille de on Pere, Rebecq", "event_link": ""},
+    {"title": "", "date": "2024-03-23", "location": "Le Terminus, Evere", "event_link": "https://www.facebook.com/events/8-rue-%C3%A9glise-st-pierre-jette-belgique/the-choesels/457359800386869/"},
+    {"title": "", "date": "2024-05-04", "location": "La Fille de son Père, Rebecq", "event_link": ""},
     {"title": "CANCELLED", "date": "2024-06-22", "location": "??", "event_link": ""},
     {"title": "", "date": "2024-07-27", "location": "l'Exelcior, Jette", "event_link": ""},
-    {"title": "", "date": "2024-09-14", "location": "Madras Bar, Braine-l'Alleud", "event_link": ""},
-    {"title": "", "date": "2024-09-28", "location": "Cafe Terminus, Evere", "event_link": ""},
+    {"title": "", "date": "2024-09-14", "location": "Madras Bar, Braine-l'Alleud", "event_link": "https://example.com", "bajs": "korv"},
+    {"title": "", "date": "2024-09-28", "location": "Le Terminus, Evere", "event_link": ""},
     {"title": "", "date": "2024-12-21", "location": "Le Métropole, Braine-l'Alleud", "event_link": ""},
     {"title": "Bar Mitzva for Ezekiel 1", "date": "2028-02-01", "location": "Sablon, Bxl", "event_link": ""},
     {"title": "Bar with Beers for Ezekiel 2", "date": "2028-03-01", "location": "Sablon, Bxl", "event_link": ""},
     {"title": "Barbapapa for Kids", "date": "2028-04-01", "location": "Sablon, Bxl", "event_link": ""},
-    {"title": "Bar for Me", "date": "2029-01-01", "location": "Sablon, Bxl", "event_link": ""},
+    {"title": "Bar for Me", "date": "2029-01-01", "location": "Sablon, Bxl", "event_link": "#"},
 ]
 
 

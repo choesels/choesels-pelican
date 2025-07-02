@@ -17,9 +17,14 @@
                 {% for concert in concerts %}
                     {% if concert.date|as_date >= today %}
                         <p>
-                            {% if concert.date %}
-                            <strong>{{ concert.date }}</strong><br />
-                            {% endif %}
+                            <strong>
+                                {% if concert.event_link %}
+                                    <a href="{{ concert.event_link }}"><i class="fa fa-external-link fa-flip-horizontal" aria-hidden="true" style="color:#9dae11aa;" title="Go to Facebook event"></i></a> &nbsp; {{ concert.date }}
+                                {% else %}
+                                    {{ concert.date }}
+                                {% endif %}
+                            </strong><br />
+
                             {% if concert.title %} {{ concert.title }}<br /> {% endif %}
                             {% if concert.location %} {{ concert.location }} {% endif %}
                         </p>
@@ -37,12 +42,16 @@
                     <h3 style="margin-bottom: 16px">Past</h3>
                     {% for concert in concerts[:5:-1] %}
                         {% if concert.date|as_date < today %}
-                            <p>
-                                {% if concert.date %}
-                                <strong>{{ concert.date }}</strong><br />
+                        <p>
+                            <strong>
+                                {% if concert.event_link %}
+                                    {{ concert.date }} &nbsp; <a href="{{ concert.event_link }}"><i class="fa fa-external-link" aria-hidden="true" style="color:#9dae11aa;" title="Go to Facebook event"></i></a>
+                                {% else %}
+                                    {{ concert.date }}
                                 {% endif %}
-                                {% if concert.title %} {{ concert.title }}<br /> {% endif %}
-                                {% if concert.location %} {{ concert.location }} {% endif %}
+                            </strong><br />
+                            {% if concert.title %} {{ concert.title }}<br /> {% endif %}
+                            {% if concert.location %} {{ concert.location }} {% endif %}
                             </p>
                         {% endif %}
                     {% endfor %}
