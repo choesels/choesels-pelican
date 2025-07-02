@@ -16,12 +16,12 @@
                 <h3 style="margin-bottom: 16px">Upcoming</h3>
                 {% for concert in concerts %}
                     {% if concert.date|as_date >= today %}
-                        <!-- <p><strong>{{ concert.date }}</strong><br />{{ concert.title }}<br />{{ concert.location }}</p> -->
-                        {% if concert.date %}
-                        <strong>{{ concert.date }}</strong><br />
-                        {% endif %}
-                        {% if concert.title %} {{ concert.title }}<br /> {% endif %}
-                        {% if concert.location %} {{ concert.location }} {% endif %}
+                        <p>
+                            {% if concert.date %}
+                            <strong>{{ concert.date }}</strong><br />
+                            {% endif %}
+                            {% if concert.title %} {{ concert.title }}<br /> {% endif %}
+                            {% if concert.location %} {{ concert.location }} {% endif %}
                         </p>
                     {% endif %}
                 {% endfor %}
