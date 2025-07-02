@@ -474,3 +474,8 @@ footer a.toTop {
 footer#scroll-to-top-no-bg {
     background: transparent;
 }
+
+/*put image in middle of col*/
+.display-center {
+    display:table;margin:auto;
+}
