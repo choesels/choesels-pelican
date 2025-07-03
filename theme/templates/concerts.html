@@ -6,7 +6,7 @@
 <section id="concerts" class="arrow-down">
     <div class="container">
         <header class="text-center">
-            <h1>LATEST CONCERTS</h1>
+            <h1>&nbsp; LATEST CONCERTS</h1>
         </header>
         <div class="container">
             <div class="row">
@@ -38,7 +38,7 @@
                 </div>
 
                 <!-- Past concerts -->
-                <div class="col-md-4">
+                <div class="col-md-4 text-left">
                     <h3 style="margin-bottom: 16px">Past</h3>
                     {% for concert in concerts[:5:-1] %}
                         {% if concert.date|as_date < today %}
