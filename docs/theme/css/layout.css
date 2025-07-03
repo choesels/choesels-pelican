@@ -309,6 +309,7 @@ section.alternate.arrow-down {
 /** 11. Footer
  **************************************************************** **/
  footer {
+  color:#cfcfcf;
   padding:10px 0;
   font-size:13px;
   background:#0F1113;
@@ -478,4 +479,8 @@ footer#scroll-to-top-no-bg {
 /*put image in middle of col*/
 .display-center {
     display:table;margin:auto;
+}
+
+.member-avatar {
+    max-width: 250px;
 }
